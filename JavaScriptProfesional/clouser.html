@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Clouser
+    un clouser es cuando una funcion es definida dentro de otra funcion
+     y solo se tiene acceso alo que esta dentro de esa funcion-->
+    <script>
+       (function(){
+            let color ='green'
+            function printColor(){
+                console.log(color);
+            }
+            printColor();
+        })();
+
+        
+        // retornando un objeto
+        function Contador(n){
+            let count=n;
+            return {
+                incrementar: function(){
+                    count +=1;
+                },
+                disminuir:function(){
+                    count -=1;
+                },
+                getCount:function(){
+                    return count;
+                },
+            };
+        }
+        let cont=Contador(8)
+        console.log('El contador es:',cont.getCount());
+        cont.incrementar();
+        console.log('El contador es:',cont.getCount());
+        cont.disminuir();
+        cont.disminuir();
+        cont.disminuir();
+        cont.disminuir();
+        console.log('El contador es:',cont.getCount());
+
+        
+    </script>
+    
+</body>
+</html>
